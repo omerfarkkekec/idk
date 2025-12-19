@@ -54,6 +54,8 @@ button{
     outline: 1px solid #313131;
     outline-offset: 3px;
     cursor: pointer;
+    touch-action: manipulation; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 button:active{
@@ -116,3 +118,4 @@ button:active{
     font-weight: bold;
     transition: 0.3s;
 }
+
