@@ -69,3 +69,50 @@ button:active{
     background: orangered;
     font-weight: 900;
 }
+.history {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgb(166,114,114);
+    border-radius: 10px;
+    color: white;
+    width: 360px;
+    min-height: 150px;
+    max-height: 300px;
+    background: rgba(0,0,0,0.3);
+}
+
+.history h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #313131;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.history li {
+    padding: 5px;
+    border-bottom: 1px solid #313131;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.history li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+#clearHistory {
+    display: block;        
+    margin: 10px auto;     
+    width: 50%;            
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
