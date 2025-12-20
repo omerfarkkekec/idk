@@ -10,9 +10,8 @@ let string ='';
 buttons.forEach( element => {
     element.addEventListener('click',(b) => {
 
-        sound.pause();
         sound.currentTime = 0; 
-        sound.play().catch(e => console.log("Ses çalma hatası:", e));
+        sound.play();
 
         if(b.target.innerText == '=') {
             let eskiString = string;
@@ -51,5 +50,4 @@ buttons.forEach( element => {
 })
 clearHistoryBtn.onclick = () => {
     historyList.innerHTML = '';
-
 };
