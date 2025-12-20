@@ -10,18 +10,18 @@ body {
     min-height: 100vh;
     max-width: 100%;
     display: flex;
-    flex-direction: column; /* Mobilde alt alta */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
     padding: 20px;
 }
 
-/* BİLGİSAYAR GÖRÜNÜMÜ İÇİN AYAR (Ekran genişse yan yana al) */
+
 @media (min-width: 800px) {
     body {
         flex-direction: row; 
-        gap: 20px; /* Geçmiş ile Hesap makinesi arasındaki boşluk */          
+        gap: 20px;          
     }
 }
 
@@ -31,13 +31,13 @@ body {
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
     
-    /* BİLGİSAYARDAKİ SIKI GÖRÜNÜMÜ SAĞLAYAN KOD */
+    
     width: fit-content; 
     margin: auto;
 }
 
 .display input {
-    /* KRİTİK DÜZELTME: Bilgisayarda genişliği sabitledik (Butonlar kadar: 360px) */
+    
     width: 360px; 
     border: none;
     outline: none;
@@ -86,7 +86,7 @@ button:active {
     font-weight: 900;
 }
 
-/* GEÇMİŞ PANELİ */
+
 .history {
     margin-top: 20px;
     padding: 15px;
@@ -94,13 +94,13 @@ button:active {
     border-radius: 15px;
     color: white;
     
-    /* Bilgisayarda hesap makinesiyle aynı genişlikte olsun */
+    
     width: 390px; 
     max-width: 400px;
     
     background: rgba(0,0,0,0.3);
     overflow-y: auto;
-    max-height: 400px; /* Çok uzamasın */
+    max-height: 400px; 
 }
 
 .history h3 {
@@ -140,7 +140,7 @@ button:active {
     transition: 0.3s;
 }
 
-/* KÜÇÜK TELEFONLAR İÇİN BUTON KÜÇÜLTME */
+
 @media (max-width: 450px) {
     button {
         width: 60px;   
@@ -154,7 +154,7 @@ button:active {
     }
 }
 
-/* GENEL MOBİL VE TABLET AYARLARI */
+
 @media (max-width: 800px) {
     .calculator {
         width: 95%;       
@@ -162,7 +162,7 @@ button:active {
     }
     
     .display input {
-        /* Telefonda ekranın tamamını kaplamasına izin veriyoruz */
+
         width: 100%; 
     }
     
@@ -170,4 +170,5 @@ button:active {
         width: 95%;      
         max-width: 400px;  
     }
+
 }
