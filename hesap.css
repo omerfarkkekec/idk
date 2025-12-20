@@ -30,17 +30,24 @@ body {
     box-shadow: 0 0 15px #000;
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
-    
-    /* Bilgisayarda butonları sıkıca sarması için */
-    width: fit-content;
     margin: auto;
+    
+    /* --- BİLGİSAYAR İÇİN SABİT AYAR (KİLİT NOKTA) --- */
+    /* İçerik ne olursa olsun genişlik tam 400px olacak. */
+    /* Bu sayede sağda solda boşluk kalma ihtimali SIFIRLANIR. */
+    width: 400px; 
 }
 
-/* NOT: .row sınıfına genel (bilgisayar için) flex vermedik.
-   Böylece bilgisayarda eski düzen (inline-block) devam edecek. */
+/* Satırları hizaya sokan kod (Hem PC hem Mobil için) */
+.row {
+    display: flex;
+    justify-content: center; /* Butonları satırın ortasına çiviler */
+    align-items: center;
+    width: 100%;
+}
 
 .display input {
-    width: 320px; /* Bilgisayarda sabit genişlik (butonlar kadar) */
+    width: 100%;
     border: none;
     outline: none;
     padding: 20px;
@@ -58,14 +65,14 @@ input::placeholder {
 button {
     width: 70px;
     height: 70px;
-    margin: 10px;
+    margin: 8px; /* Boşlukları eşitledik */
     background: transparent;
     color: #fff;
     font-size: 25px;
     font-weight: 600;
     border: 0;
     border-radius: 17%;
-    box-shadow: -10px -10px 15px #000;
+    box-shadow: -8px -8px 12px #000;
     outline: 1px solid #313131;
     outline-offset: 3px;
     cursor: pointer;
@@ -87,14 +94,17 @@ button:active {
     font-weight: 900;
 }
 
+/* GEÇMİŞ PANELİ */
 .history {
     margin-top: 20px;
     padding: 15px;
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
     color: white;
-    width: 350px; 
-    max-width: 90vw;
+    
+    /* Bilgisayarda hesap makinesiyle aynı genişlikte olsun */
+    width: 400px; 
+    
     background: rgba(0,0,0,0.3);
     overflow-y: auto;
     max-height: 400px;
@@ -137,32 +147,28 @@ button:active {
     transition: 0.3s;
 }
 
-/* --- TELEFON VE TABLET İÇİN ÖZEL DÜZELTMELER --- */
+/* --- TELEFONLAR İÇİN ESNEK AYARLAR --- */
 @media (max-width: 800px) {
-    
-    /* Sadece telefonda butonları esnek yapıp hizalıyoruz */
-    .row {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Mobilde input genişliğini serbest bırakıyoruz */
-    .display input {
-        width: 100%;
-        font-size: 35px;
-    }
-    
     .calculator {
-        width: 95%; /* Ekrana tam otursun */
+        /* Telefonda sabit 400px değil, ekranın %95'i olsun */
+        width: 95%;
         max-width: 400px;
     }
     
-    /* Butonları biraz küçültüp sıkıştırıyoruz ki taşmasın */
+    .history {
+        width: 95%;
+        max-width: 400px;
+    }
+
     button {
+        /* Mobilde butonları biraz ufaltalım ki sığsın */
         width: 60px;   
         height: 60px;
         margin: 5px;   
         font-size: 22px;
+    }
+    
+    .display input {
+        font-size: 35px;
     }
 }
