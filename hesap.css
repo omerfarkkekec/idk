@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     letter-spacing: 1px;
 }
 
-body{
+body {
     min-height: 100vh;
     max-width: 100%;
     display: flex;
@@ -16,56 +16,61 @@ body{
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
     padding: 20px;
 }
+
+
 @media (min-width: 800px) {
     body {
         flex-direction: row; 
-        gap: 20px;           
+        gap: 40px;                   
     }
 }
 
-.calculator{
+.calculator {
     padding: 15px;
     box-shadow: 0 0 15px #000;
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
-
+    
     
     width: fit-content;
     margin: auto;
-
 }
-.row {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
 
-.display input{
-    width: 100%;
+
+.row {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+.display input {
+    width: 100%; 
     border: none;
     outline: none;
     padding: 20px;
+    margin-bottom: 10px;
     background: transparent;
     color: #fff;
     font-size: 40px;
     text-align: right;
 }
 
-input::placeholder{
+input::placeholder {
     color: #fff;
 }
 
-button{
+button {
     width: 70px;
     height: 70px;
-    margin: 8px;
+    margin: 8px; 
     background: transparent;
     color: #fff;
     font-size: 25px;
     font-weight: 600;
     border: 0;
     border-radius: 17%;
-    box-shadow: -10px -10px 15px #000;
+    box-shadow: -8px -8px 12px #000; 
     outline: 1px solid #313131;
     outline-offset: 3px;
     cursor: pointer;
@@ -73,27 +78,29 @@ button{
     -webkit-tap-highlight-color: transparent; 
 }
 
-button:active{
+button:active {
     color: #000;
     transform: translate(2px,2px);
 }
-.opr{
+
+.opr {
     color: #fbff00;
-    background: translate(2px,2px);
-    font-size: 700;
 }
-#eqBtn{
+
+#eqBtn {
     background: orangered;
     font-weight: 900;
 }
+
+
 .history {
     margin-top: 20px;
     padding: 15px;
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
     color: white;
-    width: 350px;
-    max-width: 90vw;
+    width: 350px; 
+    max-width: 90vw; 
     background: rgba(0,0,0,0.3);
     overflow-y: auto;
     max-height: 400px;
@@ -121,6 +128,7 @@ button:active{
 .history li:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+
 #clearHistory {
     display: block;        
     margin: 10px auto;     
@@ -134,7 +142,10 @@ button:active{
     font-weight: bold;
     transition: 0.3s;
 }
+
+
 @media (max-width: 480px) {
+    
     button {
         width: 60px;   
         height: 60px;
@@ -146,23 +157,10 @@ button:active{
         font-size: 35px;
         padding: 10px;
     }
-    .calculator {
-        width: 95%;
-    }
-}
-@media (max-width: 800px) {
-    .calculator {
-        width: 95%;       
-        max-width: 400px;  
-    }
-    .display input {
-        width: 100%
-    }
-    
-    .history {
-        width: 95%;      
-        max-width: 400px;  
-    }
 
+    .calculator {
+        width: 95%; 
+    }
 }
+
 
