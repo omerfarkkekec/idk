@@ -19,13 +19,12 @@ body{
 @media (min-width: 800px) {
     body {
         flex-direction: row; 
-        gap: 40px;           
+        gap: 20px;           
     }
 }
 
 .calculator{
     padding: 15px;
-    padding-right: 0px;
     box-shadow: 0 0 15px #000;
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
@@ -37,7 +36,7 @@ body{
 }
 
 .display input{
-    width: 100%;
+    width: 360px;
     border: none;
     outline: none;
     padding: 20px;
@@ -88,10 +87,11 @@ button:active{
     border: 2px solid rgb(166,114,114);
     border-radius: 15px;
     color: white;
-    width: 100%;
+    width: 390px;
     max-width: 400px;
     background: rgba(0,0,0,0.3);
     overflow-y: auto;
+    max-height: 400px;
 }
 
 .history h3 {
@@ -146,9 +146,13 @@ button:active{
         width: 95%;       
         max-width: 400px;  
     }
+    .display input {
+        width: 100%
+    }
     
     .history {
         width: 95%;      
         max-width: 400px;  
     }
+
 }
