@@ -26,7 +26,7 @@ buttons.forEach( element => {
                string = sonuc; 
                inputBox.value = sonuc;
             };
-        historyList.prepend(li); // En yeni işlemi en üste ekle
+        historyList.prepend(li); 
         } 
         else if(b.target.innerText == 'AC') {
             string = '';
@@ -50,4 +50,5 @@ buttons.forEach( element => {
 })
 clearHistoryBtn.onclick = () => {
     historyList.innerHTML = '';
+
 };
